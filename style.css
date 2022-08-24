@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+b {
+    font-weight: bold;
+}
+
+body {
+    background-color: #F3F3F3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-topo, .barra-texto {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-topo {
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.menu-topo img {
+    width: 75px;
+    height: 53px;
+}
+
+.menu-topo ion-icon {
+    font-size: 45px;
+}
+
+.conversas {
+    margin-top: 100px;
+}
+
+.mensagem {
+    width: 100%;
+    padding: 10px 9px 10px 9px;
+    margin: 5px 0px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.status {
+    background-color: #dcdcdc;
+}
+
+.normal {
+    background-color: white;
+}
+
+.reservada {
+    background-color: #ffdede;
+}
+
+.horario {
+    color: #aaaaaa;
+}
+
+.barra-texto {
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.barra-texto ion-icon {
+    font-size: 26px;
+}
+
+.barra-texto textarea {
+    width: 98%;
+    height: 26px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    outline: none;
+    resize: none;
+    border: 0px solid white;
+}
+
+.barra-texto textarea::placeholder {
+    font-style: italic;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    
+}
+
+.barra-texto textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.texto-direcionado {
+    font-size: 14px;
+    color: #505050;
+    margin-top: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    
+    display: none;
+}
+
+.sidebar>div:first-child {
+    width: 100%;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar>div:nth-child(3) {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px;
+}
+
+.contato div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.contato > ion-icon {
+    color: green;
+}
+
+.contato ion-icon:first-child {
+    font-size: 25px;
+    margin-right: 3px;
+}
+
+.pagina-inicial {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    display: none;
+}
+
+.pagina-inicial img {
+    width: 130px;
+    height: 92px;
+    margin: 70px 0px;
+}
+
+.pagina-inicial input:nth-child(2) {
+    width: 261px;
+    height: 54px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    margin: 15px 0px;
+}
+
+.pagina-inicial input:nth-child(2)::placeholder {
+    color: #aeaeae;
+}
+
+.pagina-inicial input:nth-child(3) {
+    width: 109px;
+    height: 45px;
+    border: 0px;
+    border-radius: 9px;
+    background-color: #e7e7e7;
+    font-size: 18px;
+    color: #696969;
+    cursor: pointer;
+}

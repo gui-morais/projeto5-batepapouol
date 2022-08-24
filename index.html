@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://conteudo.imguol.com.br/c/home/layout/vueland/icons/geral/favicon.ico">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bate-Papo UOL do Guilherme</title>
+  </head>
+
+  <body>
+    <div class="pagina-inicial">
+        <img src="./Images/logo2.png" alt="Não foi possível carregar a imagem" class="logo" />
+        <input type="text" placeholder="Digite seu nome">
+        <input type="button" value="Entrar">
+    </div>
+
+    <div class="menu-topo">
+        <img src="./Images/logo.png" alt="Não foi possível carregar a imagem" class="logo" />
+        <ion-icon name="people"></ion-icon>
+    </div>
+
+    <div class="sidebar">
+        <div>Escolha um contato para enviar mensagem:</div>
+
+        <div>
+            <div class="contato">
+                <div>
+                    <ion-icon name="people"></ion-icon>
+                    Todos
+                </div>
+                <ion-icon name="checkmark"></ion-icon>
+            </div>
+
+            <div class="contato">
+                <div>
+                    <ion-icon name="person-circle"></ion-icon>
+                    João
+                </div>
+                <ion-icon name="checkmark"></ion-icon>
+            </div>
+
+            <div class="contato">
+                <div>
+                    <ion-icon name="person-circle"></ion-icon>
+                    Maria
+                </div>
+                <ion-icon name="checkmark"></ion-icon>
+            </div>
+        </div>
+
+        <div>Escolha a visibilidade</div>
+
+        <div>
+            <div class="contato">
+                <div>
+                    <ion-icon name="lock-open"></ion-icon>
+                    Público
+                </div>
+                <ion-icon name="checkmark"></ion-icon>
+            </div>
+
+            <div class="contato">
+                <div>
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Reservadamente
+                </div>
+                <ion-icon name="checkmark"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="conversas">
+        <div class="mensagem status">
+            <span class="horario">(09:21:45) </span>
+            <span class="autor-destino"><b>João</b> entra na sala...</span>
+            <span class="texto"></span>
+        </div>
+
+        <div class="mensagem normal">
+            <span class="horario">(09:22:28) </span><span class="autor-destino"><b>João</b> para <b>Todos:</b> </span><span class="texto">Bom dia</span>
+        </div>
+
+        <div class="mensagem normal">
+            <span class="horario">(09:22:38) </span>
+            <span class="autor-destino"><b>Maria</b> para <b>João: </b></span>
+            <span class="texto">Oi João :)</span>
+        </div>
+
+        <div class="mensagem reservada">
+            <span class="horario">(09:22:48) </span><b>João</b> reservadamente para <b>Maria: </b>Oi gatinha quer tc?
+        </div>
+
+        <div class="mensagem status">
+            <span class="horario">(09:22:58) </span>
+            <span class="autor-destino"><b>Maria</b> sai da sala...</span>
+            <span class="texto"></span>
+        </div>
+    </div>
+
+    <div class="barra-texto">
+        <div>
+            <textarea placeholder="Escreva aqui..."></textarea>
+            <div class="texto-direcionado">Enviando para Maria (reservadamente)</div>
+        </div>
+        <ion-icon name="paper-plane-outline"></ion-icon>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
