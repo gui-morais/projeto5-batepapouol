@@ -12,25 +12,28 @@
   <body>
     <div class="pagina-inicial">
         <img src="./Images/logo2.png" alt="Não foi possível carregar a imagem" class="logo" />
-        <input type="text" placeholder="Digite seu nome">
-        <input type="button" value="Entrar">
+        <div class="erroNome escondido">Nome de usuário inválido ou já existente.</div>
+        <input type="text" placeholder="Digite seu nome" class="nomeUsuario" onkeydown = "if (event.keyCode == 13) {document.querySelector('.botaoEntrar').click()}">
+        <input type="button" value="Entrar" class="botaoEntrar" onclick="nomeUsuario(this)">
+        <img src="./Images/loading.gif" alt="Não foi possível carregar a imagem" class="loading escondido" />
+        <div class="entrando escondido">Entrando...</div>
     </div>
 
     <div class="menu-topo">
-        <img src="./Images/logo.png" alt="Não foi possível carregar a imagem" class="logo" />
-        <ion-icon name="people"></ion-icon>
+        <img src="./Images/logo.png" alt="Não foi possível carregar a imagem" />
+        <ion-icon name="people" onclick="sidebar()"></ion-icon>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar escondido">
         <div>Escolha um contato para enviar mensagem:</div>
 
-        <div>
+        <div class="contatos">
             <div class="contato">
                 <div>
                     <ion-icon name="people"></ion-icon>
-                    Todos
+                    <span class="nome">Todos</span>
                 </div>
-                <ion-icon name="checkmark"></ion-icon>
+                <ion-icon name="checkmark" class="checkmark"></ion-icon>
             </div>
 
             <div class="contato">
@@ -38,7 +41,7 @@
                     <ion-icon name="person-circle"></ion-icon>
                     João
                 </div>
-                <ion-icon name="checkmark"></ion-icon>
+                <ion-icon name="checkmark" class="checkmark escondido"></ion-icon>
             </div>
 
             <div class="contato">
@@ -46,69 +49,46 @@
                     <ion-icon name="person-circle"></ion-icon>
                     Maria
                 </div>
-                <ion-icon name="checkmark"></ion-icon>
+                <ion-icon name="checkmark" class="checkmark escondido"></ion-icon>
             </div>
         </div>
 
         <div>Escolha a visibilidade</div>
 
-        <div>
-            <div class="contato">
-                <div>
+        <div class="modoDeEnvio">
+            <div class="contato" data-identifier="visibility">
+                <div onclick="trocarModo(this)" class="publico">
                     <ion-icon name="lock-open"></ion-icon>
-                    Público
+                    <span class="nome">Público</span>
                 </div>
-                <ion-icon name="checkmark"></ion-icon>
+                <ion-icon name="checkmark" class="checkmark"></ion-icon>
             </div>
 
-            <div class="contato">
-                <div>
+            <div class="contato" data-identifier="visibility">
+                <div onclick="trocarModo(this)" class="reservadamente">
                     <ion-icon name="lock-closed"></ion-icon>
-                    Reservadamente
+                    <span class="nome">Reservadamente</span>
                 </div>
-                <ion-icon name="checkmark"></ion-icon>
+                <ion-icon name="checkmark" class="checkmark escondido"></ion-icon>
             </div>
         </div>
     </div>
 
-    <div class="conversas">
-        <div class="mensagem status">
-            <span class="horario">(09:21:45) </span>
-            <span class="autor-destino"><b>João</b> entra na sala...</span>
-            <span class="texto"></span>
-        </div>
+    <div class="auxiliar escondido" onclick="sidebar()"></div>
 
-        <div class="mensagem normal">
-            <span class="horario">(09:22:28) </span><span class="autor-destino"><b>João</b> para <b>Todos:</b> </span><span class="texto">Bom dia</span>
-        </div>
-
-        <div class="mensagem normal">
-            <span class="horario">(09:22:38) </span>
-            <span class="autor-destino"><b>Maria</b> para <b>João: </b></span>
-            <span class="texto">Oi João :)</span>
-        </div>
-
-        <div class="mensagem reservada">
-            <span class="horario">(09:22:48) </span><b>João</b> reservadamente para <b>Maria: </b>Oi gatinha quer tc?
-        </div>
-
-        <div class="mensagem status">
-            <span class="horario">(09:22:58) </span>
-            <span class="autor-destino"><b>Maria</b> sai da sala...</span>
-            <span class="texto"></span>
-        </div>
-    </div>
+    <div class="conversas"></div>
 
     <div class="barra-texto">
         <div>
-            <textarea placeholder="Escreva aqui..."></textarea>
+            <textarea placeholder="Escreva aqui..." onkeydown = "if (event.keyCode == 13) {document.getElementById('enviar').click()}" ></textarea>
             <div class="texto-direcionado">Enviando para Maria (reservadamente)</div>
         </div>
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem()" id="enviar"></ion-icon>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
